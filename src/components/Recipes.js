@@ -1,5 +1,4 @@
 import React from "react"
-import fork from "../assets/fork.png"
 import { InfinitySpin } from "react-loader-spinner"
 
 const Recipes = props => {
@@ -50,8 +49,7 @@ const Recipes = props => {
     <div className="flex flex-col justify-center items-center mt-16">
       {!props.hasSearched && !props.searching && (
         <div>
-          <img className="h-[160px] w-[160px]" src={fork} alt="start search" />
-          <p className="text-center text-xl font-semibold text-gray-800">
+          <p className="text-center text-xl font-semibold text-slate-900">
             Start exploring
           </p>
         </div>
