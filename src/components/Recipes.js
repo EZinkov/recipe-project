@@ -16,10 +16,10 @@ const Recipes = props => {
             alt={recipe.name}
           />
         </div>
-        <h3 className="mt-4 text-center text-xl font-semibold">
+        <h3 className="mt-4 text-center text-[#1E375A] text-xl font-semibold">
           {recipe.name}
         </h3>
-        <p className="mt-4 break-words text-justify flex-1">
+        <p className="mt-4 break-words text-justify text-slate-700 flex-1">
           {recipe.description}
           {!recipe.description &&
             'Click the "Read more" button below for detailed steps to make this dish, or click the "Watch the video" button to see a demonstration.'}
@@ -31,13 +31,13 @@ const Recipes = props => {
               rel="noopener noreferrer"
               href={recipe.original_video_url}
             >
-              <button className="py-4 px-6 rounded-full hover:bg-blue-700 duration-300 bg-blue-500 text-white">
+              <button className="py-4 px-6 rounded-full hover:text-blue-600 duration-300 bg-white text-blue-900 font-semibold">
                 Watch Video
               </button>
             </a>
           )}
           <button
-            className="py-4 px-6 rounded-full hover:bg-blue-700 duration-300 bg-blue-500 text-white"
+            className="py-4 px-6 rounded-full hover:text-blue-600 duration-300 bg-white text-blue-900 font-semibold"
             onClick={() => props.setDetails(index)}
           >
             Full Recipe

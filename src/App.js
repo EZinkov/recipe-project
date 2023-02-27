@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="container my-0 mx-auto">
       {!isDetails && (
-        <div className="flex flex-col justify-center items-center h-56 bg-gradient-to-br from-blue-500 to-emerald-400 text-slate-50 rounded-b-lg">
+        <div className="flex flex-col justify-center items-center h-56 bg-[#759dc5] text-slate-50 rounded-b-lg">
           <h1 className="text-2xl font-bold capitalize  ">Recipe Haven</h1>
           <h4 className="text-xl font-semibold uppercase">
             Find your next favorite recipe with just a few clicks
@@ -70,7 +70,7 @@ function App() {
             value={food}
             onChange={handleChange}
           ></input>
-          <button className="px-6 rounded-r-md bg-gradient-to-tl text-white from-purple-500 to-slate-600">
+          <button className="px-6 rounded-r-md bg-blue-500 text-white font-bold ">
             Submit
           </button>
         </form>

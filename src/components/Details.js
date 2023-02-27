@@ -17,13 +17,13 @@ const Details = props => {
   return (
     <div>
       <div className="w-full my-0 mx-auto">
-        <h3 className="text-center font-bold text-3xl py-4">
+        <h3 className="text-center text-[#1E375A] font-bold text-3xl py-4">
           {props.currentRecipe.name}
         </h3>
         <div className="flex justify-between">
           <div>
             <button
-              className="py-4 px-6 rounded-full bg-blue-500 hover:bg-blue-700 duration-300 text-white"
+              className="py-4 px-6 rounded-md bg-white text-blue-900 font-semibold hover:text-blue-600 duration-300 "
               onClick={props.setDetails}
             >
               Return to Search
@@ -36,7 +36,7 @@ const Details = props => {
                 rel="noopener noreferrer"
                 href={props.currentRecipe.original_video_url}
               >
-                <button className="py-4 px-6 rounded-full bg-blue-500 hover:bg-blue-700 duration-300 text-white">
+                <button className="py-4 px-6 rounded-md bg-white text-blue-900 font-semibold hover:text-blue-600 duration-300">
                   Watch the video
                 </button>
               </a>
@@ -50,13 +50,17 @@ const Details = props => {
           src={props.currentRecipe.thumbnail_url}
           alt={props.currentRecipe.name}
         />
-        <p class="ml-6 text-lg">{props.currentRecipe.description}</p>
+        <p class="ml-6 text-xl text-slate-700">
+          {props.currentRecipe.description}
+        </p>
       </div>
       <div className="px-8">
-        <p className="text-2xl mb-2 font-bold">Ingredients:</p>
-        <ul className="ml-4 text-lg">{ingredientsElements}</ul>
-        <p className="text-2xl mt-6 mb-2 font-bold">Preparation:</p>
-        <ol className="ml-4 text-lg">{instructionsElements}</ol>
+        <p className="text-2xl text-[#1E375A] mb-2 font-bold">Ingredients:</p>
+        <ul className="ml-4 text-slate-700 text-lg">{ingredientsElements}</ul>
+        <p className="text-2xl text-[#1E375A] mt-6 mb-2 font-bold">
+          Preparation:
+        </p>
+        <ol className="ml-4 text-slate-700 text-lg">{instructionsElements}</ol>
       </div>
     </div>
   )
